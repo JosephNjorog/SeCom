@@ -1,7 +1,3 @@
-Certainly! Here's a revised README.md file for your Forge app project, including a detailed project structure with lists of all necessary files and directories:
-
----
-
 # Security and Compliance Monitor - Forge App for Jira Cloud
 
 This Forge app helps organizations monitor and ensure security and compliance within their Jira Cloud instances. It provides real-time alerts, compliance reports, and integrates seamlessly with Jira's ecosystem.
@@ -69,7 +65,3 @@ Once deployed, access your Forge app within Jira Cloud and configure permissions
 ### License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-Adjust the placeholders (`index.js`, `static/index.html`, etc.) with actual file names and details specific to your project. This README.md provides a structured overview of your Forge app project, guiding users through setup, development, and deployment processes.
