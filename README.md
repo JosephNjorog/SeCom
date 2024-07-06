@@ -17,11 +17,13 @@ This Forge app helps organizations monitor and ensure security and compliance wi
 
 ### File Descriptions
 
-- **README.md**: Detailed project overview, setup instructions, and structure.
-- **manifest.yml**: Forge app manifest file defining app configuration, permissions, and integrations with Jira Cloud.
-- **index.js**: Main entry point for Forge app's serverless functions, handling backend logic and integrations.
-- **static/index.html**: Example HTML file for the Forge app interface within Jira Cloud.
-- **functions/main.js**: Example serverless function file handling core app functionalities.
+manifest.yml: Describes your app. This file contains the name and ID of the app, the app permissions, and the modules the app uses. To learn more about the manifest.yml file, see Forge manifest documentation.
+package.json: The app’s Node.js metadata. See the Node documentation for more information.
+package-lock.json: Records the version of the app’s dependencies.
+README.md: Information about the app. We recommend updating this as you change the behavior of the app.
+src/frontend/index.jsx: Where you write the application with which the user interacts directly.
+src/resolvers/index.js: Where you write backend functions (resolver functions) for your app. To learn more about resolvers, see the Custom UI Resolver documentation.
+
 
 ## Getting Started
 

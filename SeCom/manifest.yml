@@ -1,0 +1,19 @@
+modules:
+  jira:issuePanel:
+    - key: secom-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: SeCom
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/784e4e63-40cc-4428-a8aa-630771cbf5e3
