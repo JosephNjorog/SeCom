@@ -1,19 +1,38 @@
-modules:
-  jira:issuePanel:
-    - key: secom-hello-world-issue-panel
-      resource: main
-      resolver:
-        function: resolver
-      render: native
-      title: SeCom
-      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
-  function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: src/frontend/index.jsx
+# manifest.yml
+
+# Define the name and description of your Forge app
 app:
-  runtime:
-    name: nodejs18.x
-  id: ari:cloud:ecosystem::app/784e4e63-40cc-4428-a8aa-630771cbf5e3
+  id: com.example.security-compliance-monitor
+  name: Security and Compliance Monitor
+  description: |
+    This Forge app helps organizations monitor and ensure security and compliance within their Jira Cloud instances.
+    It provides real-time alerts, compliance reports, and integrates seamlessly with Jira's ecosystem.
+
+# Define the app modules, including the main connect page module
+modules:
+  jira:connectPage:
+    # Specify key for your main page module
+    - key: main-page
+      title: Security and Compliance Monitor
+      function: main
+
+# Define app permissions required by your Forge app
+permissions:
+  scopes:
+    # Define scopes needed for reading and writing user data
+    - 'read:jira-user'
+    - 'write:jira-user'
+    # Define scopes needed for reading and writing Jira work data
+    - 'read:jira-work'
+    - 'write:jira-work'
+
+# Define serverless functions or endpoints for your Forge app
+functions:
+  main:
+    # Specify the handler for your main serverless function
+    handler: index.main
+
+# Define any static resources used by your Forge app (e.g., HTML files, images)
+resources:
+  - key: app-html
+    path: src/frontend/index.jsx
