@@ -1,10 +1,7 @@
-import Resolver from '@forge/resolver';
+// src/resolvers/index.js
 
-const resolver = new Resolver();
-
-resolver.define('getText', (req) => {
-  console.log(req);
-  return 'Hello, world!';
-});
-
-export const handler = resolver.getDefinitions();
+// Example resolver function
+exports.resolver = async (req, context) => {
+  // Implement your resolver logic here
+  return { data: 'Resolver data for Security and Compliance Monitor' };
+};
